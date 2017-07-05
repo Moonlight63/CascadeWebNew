@@ -1,0 +1,4 @@
+enabled: false
+framework: bootstrap
+add_default_css: true
+add_framework_assets: true

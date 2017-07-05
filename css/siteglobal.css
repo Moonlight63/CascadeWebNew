@@ -1,0 +1,281 @@
+/* CSS Document */
+
+@font-face {
+    font-family: 'bank_gothicregular';
+    src: url('../fonts/bank_gothic_medium-webfont.eot');
+    src: url('../fonts/bank_gothic_medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bank_gothic_medium-webfont.woff') format('woff'),
+		 url('../fonts/bank_gothic_medium-webfont.ttf') format('truetype'),
+         url('../fonts/bank_gothic_medium-webfont.svg#bank_gothicregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'futura_bk_btbook';
+    src: url('../fonts/futurabook-webfont.eot');
+    src: url('../fonts/futurabook-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/futurabook-webfont.woff') format('woff'),
+		 url('../fonts/futurabook-webfont.ttf') format('truetype'),
+         url('../fonts/futurabook-webfont.svg#futura_bk_btbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin: 0px 0px 200px 0px !important;
+	background-color: #EBEBEB;
+}
+p, h1, h2, h3{
+	font-family: "futura_bk_btbook";
+}
+
+h3{
+	font-size: 28px;
+}
+
+p{
+	font-size: 18px;
+}
+
+
+
+/*SECTION TITLE--------------------------------------------------*/
+.sectiontitle{
+	text-align: center;
+	width: 250px;
+	height: 65px;
+	border: solid 4px #303030;
+}
+.sectiontitle > h2{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0px;
+	font-family: 'bank_gothicregular';
+	font-size: 28px;
+}
+@media (min-width: 768px) {
+	.sectiontitle{
+		width: 350px;
+		height: 100px;
+		border-width: 5px;
+	}
+	.sectiontitle > h2{
+		font-size: 38px;
+	}
+}
+
+
+/*TOP NAV BAR ---------------------------------------------------*/
+		
+.topnav {
+	height: 75px;
+	background-color: #282828;
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 900;
+}
+.topnavlogo {
+	height: 100%;
+	display: inline-block;
+	margin-left: 5%;
+}
+.topnavlinks {
+	height: 100vh !important;
+	padding-top: 75px;
+	padding-bottom: 0;
+	overflow: visible !important;
+	background-color: #232323;
+}
+
+.topnavlinks > ul {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
+.topnavlinks > ul > li {
+	position: relative;
+	display: block;
+}
+.topnavlinks > ul > li + li {
+	margin-left: 2px;
+}
+.topnavlinks > ul > li > a {
+	text-decoration: none;
+	border-radius: 4px;
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	color: #ccc;
+}
+.topnavlinks > ul > li > a:hover, .topnavlinks > ul > li > a:focus {
+	background-color: #eee;
+	color: #333;
+}
+.topnavlinks > ul > li.active > a, .topnavlinks > ul > li.active > a:hover, .topnavlinks > ul > li.active > a:focus {
+	color: #fff;
+	background-color: #337ab7;
+}
+.topnavlinks > ul > li.disabled > a {
+	color: #777;
+	cursor: not-allowed;
+	background-color: transparent;
+}
+.topnavlinks > ul > li.disabled > a:hover, .topnavlinks > ul > li.disabled > a:focus {
+}
+.topnavlinks > ul > li > a > img {
+	max-width: none;
+}
+		
+.topnavtglbtn{	
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	float: right;
+	display: block;
+	margin-right: 5%;
+}
+
+.topnavtglbtn > button{
+	background-color: transparent;
+	background-image: none;
+	padding: 10px;
+	border: 1px solid transparent;
+	border-color: #ddd;
+	border-radius: 5px;
+}
+@media (min-width: 768px) {
+	.topnav {
+		height: 100px;
+	}
+	.topnavlinks {
+		position: relative;
+		display: inline-block;
+		height: auto !important;
+		padding-bottom: 0;
+		padding-top: 0px;
+		background-color: transparent;
+		overflow: visible !important;
+		float: right;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-right: 5%;
+	}
+
+	.topnavlinks > ul{
+		display: inline-block;
+		background-color: transparent;
+	}
+
+	.topnavlinks > ul > li {
+		float: left;
+	}
+}
+.icon-bar {
+	background-color: #ddd;
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	margin-top: 4px;
+}
+
+/*END TOP NAV BAR------------------------------------------------*/
+		
+		
+/*FOOTER---------------------------------------------------------*/
+		
+.footer {
+	position: absolute;
+	bottom: 0px;
+	height: 150px;
+	width: 100%;
+}
+.footercont1{
+	top: 0px;
+	background-color: #323338;
+	width: 100%;
+	height: 75px;
+}
+.footercont2{
+	bottom: 0px;
+	background-color: #28292A;
+	width: 100%;
+	height: 75px;
+}
+.footerlinks{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 20px;
+}
+.footerlink{
+	position: relative;
+	width: 35px;
+	height: 35px;
+	display: block;
+	float: left;
+	transition-duration: 0.5s;
+/*	background-color: #28292A;*/
+	padding: 0px;
+}
+.footerlink + .footerlink{
+	margin-left: 10px;
+}
+.footerlink a i{
+	font-size: 35px;
+	color: white;
+	opacity: 0.35;
+}
+.footerlink a img{
+	margin-top: 50%;
+	transform: translateY(-50%);
+	height: auto;
+	opacity: 0.35;
+}
+.footercopy{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0px 50px 0px 50px;
+}
+
+@media (min-width: 768px) {
+	.footer {
+		height: 200px;
+		width: 100%;
+	}
+	.footercont1{
+		height: 100px;
+	}
+	.footercont2{
+		height: 100px;
+	}
+	.footerlinks{
+		margin-top: 28px;
+	}
+	.footerlink{
+		width: 45px;
+		height: 45px;
+	}
+	.footerlink + .footerlink{
+		margin-left: 10px;
+	}
+	.footerlink a i{
+		font-size: 45px;
+	}
+	.footercopy{
+		margin: 0px 50px 0px 50px;
+	}
+}
+		
+/*END FOOTER-----------------------------------------------------*/

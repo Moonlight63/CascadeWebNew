@@ -1,0 +1,99 @@
+{% embed 'partials/base.html.twig' %}
+
+    {% if query is null %}
+        {% set collection = page.collection() %}
+    {% else %}
+        {% set collection = search_results %}
+    {% endif %}
+    
+	{% set base_url = page.url %}
+    {% set feed_url = base_url %}
+
+    {% if base_url == '/' %}
+        {% set base_url = '' %}
+    {% endif %}
+
+    {% if base_url == base_url_relative %}
+        {% set feed_url = base_url~'/'~page.slug %}
+    {% endif  %}
+
+
+	{% block content %}
+        {{ dump(collection) }}
+        <div class="sectiontitle">
+            {{ page.content }}
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 blog-main">
+
+                    {% if config.plugins.breadcrumbs.enabled %}
+                        {% include 'partials/breadcrumbs.html.twig' %}
+                    {% endif %}
+                    
+                    {% if query %}
+                        <h1 class="search-header">{{"PLUGIN_SIMPLESEARCH.SEARCH_RESULTS"|t}}</h1>
+                        <p>
+                            {% set count = search_results ? search_results.count : 0 %}
+                            {% if count == 1 %}
+                                {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query)|raw }}
+                            {% else %}
+                                {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query, count)|raw }}
+                            {% endif %}
+                        </p>
+                    {% endif %}
+
+                    {% for child in collection %}
+                        {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
+                    {% endfor %}
+
+                </div>
+
+        		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+       				{% include 'partials/sidebar.html.twig' with {'blog':page} %}
+        		</div>
+            </div>
+        </div>
+        
+        <script>
+            //$(window).load(function(){
+                $('span.fr-video').each(function(){
+                    var $this = $(this);
+                    var parentWidth = $this.parent().css('width');
+                    var width = $this.find('iframe').css('width');
+                    var height = $this.find('iframe').css('height');
+
+                    var percent = ((parseFloat(width) / parseFloat(parentWidth)) * 100) + '%';
+
+                    console.log(width);
+                    console.log(height);
+
+                    $this.css({'position': 'relative', 'display': 'block', 'width': '100%', 'height': 0, 'padding-bottom': '56.25%', 'overflow': 'hidden'});
+
+                    $this.find('iframe').css({'position': 'absolute', 'top': 0, 'left': 0, 'width': '100%', 'height': '100%', 'border': 0});
+                    
+                    //$this.wrap('<span style="max-width: 100%; width: ' + percent + '; display: block"></span>');
+                    $this.wrap('<span style="max-width: 100%; width: 100%; display: block"></span>');
+
+                });
+            //});
+                
+        </script>
+	{% endblock %}
+
+	{% block pagination %}
+        {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 text-center">
+                    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+                </div>
+            </div>
+        </div>
+	    {% endif %}
+	{% endblock %}
+
+{% endembed %}
+
+

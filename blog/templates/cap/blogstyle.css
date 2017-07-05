@@ -1,0 +1,51 @@
+/* CSS Document */
+
+article.post {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 60px;
+	padding-top: 60px;
+}
+
+article.post:last-child,
+article.single {
+    border-bottom: 0;
+}
+
+
+article.post{
+	font-size: 18px;
+	font-family: "futura_bk_btbook";
+}
+
+article.post h2{
+	font-family: 'bank_gothicregular';
+}
+
+article.post .posttitle a{
+	color: #303030;
+    text-decoration: none;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+}
+
+article.post .posttitle a:hover, article.post .posttitle a:focus{
+	color: #000000;
+}
+
+article.post .postinfo a{
+	color: #303030;
+    text-decoration: none;
+    -moz-transition-duration: 0.1s;
+    -webkit-transition-duration: 0.1s;
+}
+
+article.post .postinfo a:hover, article.post .postinfo a:focus{
+	color: #000000;
+}
+
+article.author{
+	font-size: 18px;
+	font-family: "futura_bk_btbook";
+	padding-bottom: 60px;
+	border-bottom: 1px solid #d1d1d1;
+}

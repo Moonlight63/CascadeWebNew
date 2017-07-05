@@ -1,0 +1,20 @@
+@extends:
+    type: default
+    context: blueprints://pages
+    
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            content:
+                replace@: true
+                type: froala
+                validate:
+                    type: textarea
+                    
+            uploads:
+              type: pagemedia
+              editor: html
+              label: PLUGIN_ADMIN.PAGE_MEDIA

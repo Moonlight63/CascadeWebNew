@@ -1,0 +1,127 @@
+# English
+en:
+  PLUGINS:
+    SOCIAL_META_TAGS:
+      PLUGIN_NAME: 'Social Meta Tags'
+      PLUGIN_STATUS: 'Plugin status'
+      PLUGIN_ACTIVE: 'Active'
+      PLUGIN_INACTIVE: 'Inactive'
+      PLUGIN_ACTIVE_HELP: 'This option is used to (de-)activate this plugin on a per-page basis.'
+      YES: 'Yes'
+      NO: 'No'
+      
+      TWITTER:
+        NAME: 'Twitter Cards'
+        ENABLED: 'Twitter Cards active'
+        HELP: 'Share with Twitter Cards'
+        TYPE: 'Card Type'
+        TYPE_HELP: 'Summary Card with Large Image or Short Summary'
+        TYPE_CARDS:
+          LARGE: 'Summary Card with Large Image'
+          SUMMARY: 'Summary Card'
+        ABOUTME: 'Use AboutMe Plugin'
+        USERNAME: 'Username'
+        USERNAME_HELP: 'If you not use AboutMe plugin, please define your twitter username (@username)'
+
+      FACEBOOK:
+        NAME: 'Facebook Open Graph'
+        ENABLED: 'Facebook Open Graph active'
+        HELP: 'Share on Facebook'
+        APPID: 'App ID'
+        APPID_HELP: 'The App ID you get from the Facebook Developers page (https://developers.facebook.com/apps).'
+
+# Español
+es:
+  PLUGINS:
+    SOCIAL_META_TAGS:
+      PLUGIN_NAME: 'Social Meta Tags'
+      PLUGIN_STATUS: 'Plugin status'
+      PLUGIN_ACTIVE: 'Activo'
+      PLUGIN_INACTIVE: 'Inactivo'
+      PLUGIN_ACTIVE_HELP: 'Esta opción es usara para activar/desactivar el plugin'
+      YES: 'Si'
+      NO: 'No'
+
+      TWITTER:
+        NAME: 'Twitter Cards'
+        ENABLED: 'Twitter Cards activo'
+        HELP: 'Comparte en Twitter'
+        TYPE: 'Tipo de Twitter Card'
+        TYPE_HELP: 'Tarjetas de Resumen con o sin imagen grande'
+        TYPE_CARDS:
+          LARGE: 'Tarjetas de Resumen con imagen grande'
+          SUMMARY: 'Tarjetas de Resumen'
+        ABOUTME: 'Utilizar el plugin aboutMe'
+        USERNAME: 'Nombre del usuario'
+        USERNAME_HELP: 'Si no se utiliza aboutMe plugin, por favor, defina el nombre de usuario de Twitter'
+
+      FACEBOOK:
+        NAME: 'Facebook Open Graph'
+        ENABLED: 'Facebook Open Graph activo'
+        HELP: 'Comparte en Facebook'
+        APPID: 'App ID'
+        APPID_HELP: 'El ID de la aplicación que obtiene de la página de desarrolladores de Facebook (https://developers.facebook.com/apps).'
+
+# French
+fr:
+  PLUGINS:
+    SOCIAL_META_TAGS:
+      PLUGIN_NAME: 'Social Meta Tags'
+      PLUGIN_STATUS: 'Statut du plugin'
+      PLUGIN_ACTIVE: 'Actif'
+      PLUGIN_INACTIVE: 'Inactif'
+      PLUGIN_ACTIVE_HELP: 'Cette option permet d’activer ou non le plugin sur une base par page.'
+      YES: 'Oui'
+      NO: 'Non'
+      
+      TWITTER:
+        NAME: 'Cartes Twitter'
+        ENABLED: 'Cartes Twitter activées'
+        HELP: 'Partager avec les cartes Twitter'
+        TYPE: 'Type de carte'
+        TYPE_HELP: 'Carte de résumé avec grande image ou résumé court'
+        TYPE_CARDS:
+          LARGE: 'Carte de résumé avec grande image'
+          SUMMARY: 'Carte de résumé'
+        ABOUTME: 'Utiliser le plugin AboutMe'
+        USERNAME: 'Nom d''utilisateur'
+        USERNAME_HELP: 'Si le plugin AboutMe n''est pas utilisé, veuillez définir le nom d''utilisateur Twitter SVP'
+
+      FACEBOOK:
+        NAME: 'Facebook Open Graph'
+        ENABLED: 'Facebook Open Graph activé'
+        HELP: 'Partager sur Facebook'
+        APPID: 'ID d’application'
+        APPID_HELP: 'L’ID d’application pour se connecter à la page Développeurs Facebook (https://developers.facebook.com/apps).'
+
+# German
+de:
+  PLUGINS:
+    SOCIAL_META_TAGS:
+      PLUGIN_NAME: 'Social Meta Tags'
+      PLUGIN_STATUS: 'Plugin Status'
+      PLUGIN_ACTIVE: 'Aktiviert'
+      PLUGIN_INACTIVE: 'Deaktiviert'
+      PLUGIN_ACTIVE_HELP: 'Diese Option dient dem seitenbasierten Aktivieren/Deaktivieren des Plugins.'
+      YES: 'Ja'
+      NO: 'Nein'
+      
+      TWITTER:
+        NAME: 'Twitter Cards'
+        ENABLED: 'Twitter Cards aktiviert'
+        HELP: 'Teile mit Twitter Cards'
+        TYPE: 'Karten-Typ'
+        TYPE_HELP: 'Karte mit einer Zusammenfassung und großem Bild oder nur einer Zusammenfassung'
+        TYPE_CARDS:
+          LARGE: 'Karte mit einer Zusammenfassung und großem Bild'
+          SUMMARY: 'Karte mit einer Zusammenfassung'
+        ABOUTME: 'Verwenden Sie das Plugin AboutMe'
+        USERNAME: 'Benutzername'
+        USERNAME_HELP: 'Wenn AboutMe Plugin nicht verwendet wird, setzen Sie bitte die Twitter-Benutzernamen bitte'
+
+      FACEBOOK:
+        NAME: 'Facebook Open Graph'
+        ENABLED: 'Facebook Open Graph aktiviert'
+        HELP: 'Teile auf Facebook'
+        APPID: 'App ID'
+        APPID_HELP: 'Dies ist die ID-Nummer, die auf der Facebook Entwickler-Website erhältlich ist (https://developers.facebook.com/apps).'

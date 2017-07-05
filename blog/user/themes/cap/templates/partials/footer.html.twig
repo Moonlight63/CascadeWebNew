@@ -1,0 +1,39 @@
+<footer class="footer">
+	<div class="footercont1">
+		<div class="footerlinks">
+            <div class="footerlink hvr-float">
+                <a href="/blog">
+                    <i class="fa fa-rss-square" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="footerlink hvr-float">
+                <a href="https://www.facebook.com/CascadeAerialPhotography/">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="footerlink hvr-float">
+                <a href="https://www.youtube.com/channel/UCmfrIzjibW2uw-ZUbYZhEDA">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="footerlink hvr-float">
+                <a href="#" class="backToTop">
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+	</div>
+	<div class="footercont2">
+		<p class="footercopy text-center text-muted">All Content © Cascade Aerial Photography, 2017. All Rights Reserved.</p>
+	</div>
+</footer>
+
+<script>
+jQuery(document).ready(function() {
+	jQuery('.backToTop').click(function(event) {
+		event.preventDefault();
+		jQuery('html, body').animate({scrollTop: 0}, 1000);
+		return false;
+	});
+});
+</script>

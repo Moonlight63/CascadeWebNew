@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/maincontenttemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- InstanceBeginEditable name="doctitle" -->
+		<title>Gallery - Cascade Aerial Photography</title>
+		<!-- InstanceEndEditable -->
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+		<link rel="stylesheet" href="css/push-menu.css">
+		<link rel="icon" type="image/png" href="img/Logo_Vector_Black2.png">
+
+		<!--LightGallery-->
+		<link rel="stylesheet" href="css/lightgallery.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/siteglobal.css"/>
+		
+		<script type='application/ld+json'> 
+		{
+			"@context": "http://www.schema.org",
+			"@type": "LocalBusiness",
+			"name": "Cascade Aerial Photography",
+			"url": "http://cascadeap.com/",
+			"telephone": "+1(253)-888-0499",
+			"email": "contact@cascadeap.com",
+			"priceRange": "$$$",
+			"sameAs": [
+				"http://www.cascadeap.com/",
+				"http://www.cascadeaerialphotography.com/",
+				"http://cascadeaerialphotography.com/"
+			],
+			"logo": "http://cascadeap.com/img/logo.jpg",
+			"image": "http://cascadeap.com/img/logo.jpg",
+			"description": "Cascade Aerial Photography is one of the first in the pacific northwest to carry all required FAA certifications and to be fully compliant with all of the new UAS operating regulations. Safety is always our number one priority on any operation. All of our flights are fully insured to protect the safety and property of our clients. By utilizing the latest, state-of-the-art camera and flight stabilization technologies, we are working with our clients to provide them with a new perspective that helps them achieve their goals more efficiently. Whether it's cinema, events, weddings, real-estate, advertising, inspection, or something else entirely, Cascade may have a solution for you. Contact us to find out!",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "2523 Pacific Hwy E, Suite D",
+				"addressLocality": "Fife",
+				"addressRegion": "Washington",
+				"postalCode": "98424",
+				"addressCountry": "USA"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "47.24519999",
+				"longitude": "-122.39538932"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1(253)-888-0499",
+				"email": "contact@cascadeap.com",
+				"contactType": "customer service"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1(253)-888-0499",
+				"email": "contact@cascadeap.com",
+				"contactType": "sales"
+			}
+		}
+		</script>
+		
+		<!-- InstanceBeginEditable name="head" -->
+		<style>
+			a.thumbnail > div{
+				position: relative; 
+				overflow: hidden; 
+				padding-bottom: 75%;
+			}
+			a.thumbnail > div > img{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: 100%;
+				width: auto;
+				transform: translate(-50%, -50%);
+				transition: transform 0.15s ease 0s;
+			}
+			a.thumbnail > div > img.portrait{
+				height: auto;
+				width: 100%;
+			}
+			a.thumbnail:hover > div > img{
+				transform: translate(-50%, -50%) scale3d(1.1, 1.1, 1.1);
+			}
+			a.thumbnail > div div.searchHover{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0);
+				transition: background-color 0.15s ease 0s;
+			}
+			a.thumbnail:hover > div div.searchHover{
+				background-color: rgba(0,0,0,0.50);
+			}
+			a.thumbnail > div div.searchHover > i{
+				color: white;
+				position: absolute;
+				font-size: 40px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+				transition: opacity 0.15s ease 0s;
+			}
+			a.thumbnail:hover > div div.searchHover > i{
+				opacity: 1;
+			}
+            
+            a.thumbnail > div div.overlay{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0);
+			}
+			a.thumbnail > div div.overlay > i{
+				color: white;
+				position: absolute;
+				font-size: 60px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0.75;
+			}
+			
+		</style>
+		<!-- InstanceEndEditable -->
+	</head>
+	<body>
+		
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/push-menu.js"></script>
+<!--		<script src="../js/smoothscroll.js"></script>-->
+		
+	
+		<div class="topnav">
+			<img src="img/logo_vector_white.svg" alt="Logo" class="topnavlogo"/>
+			<div class="topnavtglbtn visible-xs">
+				<button type="button" data-toggle="push" data-target="#mainnavlinks" data-direction="right" aria-expanded="false"> 
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="mainnavlinks" class="topnavlinks">
+				<ul>
+					<!-- InstanceBeginEditable name="NavButtons" -->
+					<li role="presentation"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+					<li role="presentation"><a href="/about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+					<li role="presentation"><a href="/services"><i class="fa fa-tasks" aria-hidden="true"></i> Services</a></li>
+					<li role="presentation" class="active"><a href="/gallery"><i class="fa fa-camera" aria-hidden="true"></i> Gallery</a></li>
+					<li role="presentation"><a href="/contact"><i class="fa fa-envelope-open" aria-hidden="true"></i> Contact</a></li>
+					<!-- InstanceEndEditable -->
+				</ul>
+			</div>
+		</div>
+		
+		
+		<!-- InstanceBeginEditable name="MainPageContent" -->
+		
+		<div id="pagecontent" style="padding-top: 0px; padding-bottom: 0px;">
+			<section class="headcontent">
+				<div style="display: inline-block; max-width: 100vw; width: 100%; height:auto; padding-bottom: 50px;">
+					<div class="sectiontitle" style="display: block; margin-left: 50%; transform: translateX(-50%); margin-top: 150px">
+						<h2>GALLERY</h2>
+					</div>
+				</div>
+			</section>
+			
+			<section style="padding-top: 50px; padding-bottom: 50px; margin-bottom: 300px; background-color: #232323">
+				<div style="display: inline-block; max-width: 100vw; width: 100%; height:auto; padding-bottom: 50px;">
+					<div class="container">
+						<div class="row gallery">
+							<!--Content is filled randomly with JS-->
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+		
+		<script src="js/parallax.min.js"></script>
+		
+		<!-- InstanceEndEditable -->	
+		
+		<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) --> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> 
+		<script src="js/lightgallery.min.js"></script> 
+		
+		<!-- lightgallery plugins --> 
+		
+		<script src="js/lg-fullscreen.min.js"></script> 
+		<script src="js/lg-autoplay.min.js"></script> 
+		<script src="js/lg-hash.min.js"></script> 
+		<script src="js/lg-pager.min.js"></script> 
+		<script src="js/lg-share.min.js"></script> 
+		<script src="js/lg-video.js"></script> 
+		<script src="js/lg-zoom.min.js"></script> 
+		<script src="js/lg-thumbnail.min.js"></script>
+		<!-- InstanceBeginEditable name="lightgalleryoptions" -->
+		
+		<script>
+		
+			$(window).load(function(){
+				
+				function shuffle(array) {
+					var currentIndex = array.length, temporaryValue, randomIndex;
+
+					// While there remain elements to shuffle...
+					while (0 !== currentIndex) {
+
+						// Pick a remaining element...
+						randomIndex = Math.floor(Math.random() * currentIndex);
+						currentIndex -= 1;
+
+						// And swap it with the current element.
+						temporaryValue = array[currentIndex];
+						array[currentIndex] = array[randomIndex];
+						array[randomIndex] = temporaryValue;
+					}
+
+					return array;
+				}
+				
+				var images = [
+					['assets/gallery/04A7371.jpg', 'assets/gallery/thumbs/04A7371.jpg'],
+					['assets/gallery/04A7374.jpg', 'assets/gallery/thumbs/04A7374.jpg'],
+					['assets/gallery/04A7396.jpg', 'assets/gallery/thumbs/04A7396.jpg'],
+					['assets/gallery/04A7397_00.jpg', 'assets/gallery/thumbs/04A7397_00.jpg'],
+					['assets/gallery/04A7414.jpg', 'assets/gallery/thumbs/04A7414.jpg'],
+					['assets/gallery/04A7423.jpg', 'assets/gallery/thumbs/04A7423.jpg'],
+					['assets/gallery/04A7426_00.jpg', 'assets/gallery/thumbs/04A7426_00.jpg'],
+					['assets/gallery/still002.jpg', 'assets/gallery/thumbs/still002.jpg'],
+					['assets/gallery/still005.jpg', 'assets/gallery/thumbs/still005.jpg'],
+					['assets/gallery/still006.jpg', 'assets/gallery/thumbs/still006.jpg'],
+					['assets/gallery/still007.jpg', 'assets/gallery/thumbs/still007.jpg'],
+					['assets/gallery/still008.jpg', 'assets/gallery/thumbs/still008.jpg'],
+					['assets/gallery/still010.jpg', 'assets/gallery/thumbs/still010.jpg'],
+					['assets/gallery/still012.jpg', 'assets/gallery/thumbs/still012.jpg'],
+					['assets/gallery/still016.jpg', 'assets/gallery/thumbs/still016.jpg'],
+					['assets/gallery/still018.jpg', 'assets/gallery/thumbs/still018.jpg'],
+					['assets/gallery/still020.jpg', 'assets/gallery/thumbs/still020.jpg'],
+					['https://youtu.be/-JfYCPEBbeA', 'assets/gallery/thumbs/John Mosich - Fox Island3.jpg', 'video'],
+					['assets/gallery/Sue_0007.jpg', 'assets/gallery/Sue_0007.jpg'],
+					['assets/gallery/Sue_0036.jpg', 'assets/gallery/Sue_0036.jpg'],
+					['assets/gallery/Fox_0010.jpg', 'assets/gallery/Fox_0010.jpg'],
+					['assets/gallery/Fox_0011.jpg', 'assets/gallery/Fox_0011.jpg'],
+					['assets/gallery/Fox_0016.jpg', 'assets/gallery/Fox_0016.jpg'],
+					['assets/gallery/Fox_0023.jpg', 'assets/gallery/Fox_0023.jpg'],
+					['assets/gallery/Day_0081.jpg', 'assets/gallery/Day_0081.jpg'],
+					['assets/gallery/Day_0012.jpg', 'assets/gallery/Day_0012.jpg'],
+					['assets/gallery/Day_0014.jpg', 'assets/gallery/Day_0014.jpg'],
+					['assets/gallery/Day_0087.jpg', 'assets/gallery/Day_0087.jpg'],
+					['assets/gallery/Day_0089.jpg', 'assets/gallery/Day_0089.jpg'],
+					['assets/gallery/Day_0091.jpg', 'assets/gallery/Day_0091.jpg'],
+					['assets/gallery/Day_0092.jpg', 'assets/gallery/Day_0092.jpg'],
+                    ['https://youtu.be/zE9nBYNAKFQ', 'assets/gallery/thumbs/Fun_In_Seattle.jpg', 'video'],
+                    ['https://youtu.be/uZ2js9svHDc', 'assets/gallery/thumbs/TacomaBridgesYT.jpg', 'video'],
+                    ['https://youtu.be/84Gm81zKNIw', 'assets/gallery/thumbs/awagner1409.jpg', 'video'],
+                    ['assets/gallery/awagner1409_001.jpg', 'assets/gallery/awagner1409_001.jpg'],
+                    ['assets/gallery/awagner1409_002.jpg', 'assets/gallery/awagner1409_002.jpg'],
+                    ['assets/gallery/awagner1409_003.jpg', 'assets/gallery/awagner1409_003.jpg'],
+                    ['assets/gallery/awagner1409_005.jpg', 'assets/gallery/awagner1409_005.jpg'],
+                    ['assets/gallery/awagner1409_006.jpg', 'assets/gallery/awagner1409_006.jpg'],
+                    ['assets/gallery/awagner1409_007.jpg', 'assets/gallery/awagner1409_007.jpg'],
+                    ['assets/gallery/awagner1409_008.jpg', 'assets/gallery/awagner1409_008.jpg'],
+				];
+				
+				var randarr = shuffle(images);
+				
+				var gallery = $('.gallery');
+				
+				randarr.forEach(function(imgpath){
+                    
+                    if(imgpath[2] != null && imgpath[2] == 'video'){
+                        gallery.append(
+						'<div class="col-xs-6 col-md-4 col-lg-3">' +
+						'<a class="thumbnail" href="' + imgpath[0] + '">' +
+						'<div> <img src="' + imgpath[1] + '" alt="" class="img">' +
+						'<div class="overlay"> <i class="fa fa-play" aria-hidden="true">' +
+						'</i></div>' + 
+                        '<div class="searchHover"> <i class="fa fa-search" aria-hidden="true">' +
+						'</i></div>' + 
+                        '</div></a></div>'
+						);
+                    } else {
+                        gallery.append(
+						'<div class="col-xs-6 col-md-4 col-lg-3">' +
+						'<a class="thumbnail" href="' + imgpath[0] + '">' +
+						'<div> <img src="' + imgpath[1] + '" alt="" class="img">' +
+						'<div class="searchHover"> <i class="fa fa-search" aria-hidden="true">' +
+						'</i></div></div></a></div>'
+						);
+                    }
+                    
+				});
+				
+				$('.gallery').lightGallery({
+					selector: '.thumbnail',
+					youtubePlayerParams: {
+						modestbranding: 1,
+						showinfo: 0,
+						rel: 0,
+						controls: 1
+					},
+					loadYoutubeThumbnail: true,
+					youtubeThumbSize: 'default',
+					vimeoPlayerParams: {
+						byline : 0,
+						portrait : 0,
+						color : 'A90707'     
+					},
+					loadVimeoThumbnail: true,
+					vimeoThumbSize: 'thumbnail_medium'					
+				});
+				
+			});
+		
+		</script>
+		<!-- InstanceEndEditable -->
+		<footer class="footer">
+			<div class="footercont1">
+				<div class="footerlinks">
+				    <div class="footerlink hvr-float">
+						<a href="./blog">
+							<i class="fa fa-rss-square" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="footerlink hvr-float">
+						<a href="https://www.facebook.com/CascadeAerialPhotography/">
+							<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="footerlink hvr-float">
+						<a href="https://www.youtube.com/channel/UCmfrIzjibW2uw-ZUbYZhEDA">
+							<i class="fa fa-youtube-play" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="footerlink hvr-float">
+						<a href="#" class="backToTop">
+							<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						</a>
+					</div>
+                </div>
+			</div>
+			<div class="footercont2">
+				<p class="footercopy text-center text-muted">All Content © Cascade Aerial Photography, 2017. All Rights Reserved.</p>
+			</div>
+		</footer>
+		
+		<script>
+		jQuery(document).ready(function() {
+			jQuery('.backToTop').click(function(event) {
+				event.preventDefault();
+				jQuery('html, body').animate({scrollTop: 0}, 1000);
+				return false;
+			});
+		});
+		</script>		
+	</body>
+=======
+<!DOCTYPE html>
+<!-- InstanceBegin template="/Templates/maincontenttemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- InstanceBeginEditable name="doctitle" -->
+		<title>Gallery - Cascade Aerial Photography</title>
+		<!-- InstanceEndEditable -->
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.0/css/hover-min.css">
+		<link rel="stylesheet" href="css/push-menu.css">
+		<link rel="icon" type="image/png" href="img/Logo_Vector_Black2.png">
+
+		<!--LightGallery-->
+		<link rel="stylesheet" href="css/lightgallery.min.css" type="text/css"/>
+		<link rel="stylesheet" href="css/siteglobal.css"/>
+		
+		<script type='application/ld+json'> 
+		{
+			"@context": "http://www.schema.org",
+			"@type": "LocalBusiness",
+			"name": "Cascade Aerial Photography",
+			"url": "http://cascadeap.com/",
+			"telephone": "+1(253)-888-0499",
+			"email": "contact@cascadeap.com",
+			"priceRange": "$$$",
+			"sameAs": [
+				"http://www.cascadeap.com/",
+				"http://www.cascadeaerialphotography.com/",
+				"http://cascadeaerialphotography.com/"
+			],
+			"logo": "http://cascadeap.com/img/logo.jpg",
+			"image": "http://cascadeap.com/img/logo.jpg",
+			"description": "Cascade Aerial Photography is one of the first in the pacific northwest to carry all required FAA certifications and to be fully compliant with all of the new UAS operating regulations. Safety is always our number one priority on any operation. All of our flights are fully insured to protect the safety and property of our clients. By utilizing the latest, state-of-the-art camera and flight stabilization technologies, we are working with our clients to provide them with a new perspective that helps them achieve their goals more efficiently. Whether it's cinema, events, weddings, real-estate, advertising, inspection, or something else entirely, Cascade may have a solution for you. Contact us to find out!",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "2523 Pacific Hwy E, Suite D",
+				"addressLocality": "Fife",
+				"addressRegion": "Washington",
+				"postalCode": "98424",
+				"addressCountry": "USA"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": "47.24519999",
+				"longitude": "-122.39538932"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1(253)-888-0499",
+				"email": "contact@cascadeap.com",
+				"contactType": "customer service"
+			},
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+1(253)-888-0499",
+				"email": "contact@cascadeap.com",
+				"contactType": "sales"
+			}
+		}
+		</script>
+		
+		<!-- InstanceBeginEditable name="head" -->
+		<style>
+			a.thumbnail > div{
+				position: relative; 
+				overflow: hidden; 
+				padding-bottom: 75%;
+			}
+			a.thumbnail > div > img{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: 100%;
+				width: auto;
+				transform: translate(-50%, -50%);
+				transition: transform 0.15s ease 0s;
+			}
+			a.thumbnail > div > img.portrait{
+				height: auto;
+				width: 100%;
+			}
+			a.thumbnail:hover > div > img{
+				transform: translate(-50%, -50%) scale3d(1.1, 1.1, 1.1);
+			}
+			a.thumbnail > div div.searchHover{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0);
+				transition: background-color 0.15s ease 0s;
+			}
+			a.thumbnail:hover > div div.searchHover{
+				background-color: rgba(0,0,0,0.50);
+			}
+			a.thumbnail > div div.searchHover > i{
+				color: white;
+				position: absolute;
+				font-size: 40px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+				transition: opacity 0.15s ease 0s;
+			}
+			a.thumbnail:hover > div div.searchHover > i{
+				opacity: 1;
+			}
+            
+            a.thumbnail > div div.overlay{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0);
+			}
+			a.thumbnail > div div.overlay > i{
+				color: white;
+				position: absolute;
+				font-size: 60px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0.75;
+			}
+			
+		</style>
+		<!-- InstanceEndEditable -->
+	</head>
+	<body>
+		
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/push-menu.js"></script>
+<!--		<script src="../js/smoothscroll.js"></script>-->
+		
+	
+		<div class="topnav">
+			<img src="img/logo_vector_white.svg" alt="Logo" class="topnavlogo"/>
+			<div class="topnavtglbtn visible-xs">
+				<button type="button" data-toggle="push" data-target="#mainnavlinks" data-direction="right" aria-expanded="false"> 
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="mainnavlinks" class="topnavlinks">
+				<ul>
+					<!-- InstanceBeginEditable name="NavButtons" -->
+					<li role="presentation"><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+					<li role="presentation"><a href="/about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+					<li role="presentation"><a href="/services"><i class="fa fa-tasks" aria-hidden="true"></i> Services</a></li>
+					<li role="presentation" class="active"><a href="/gallery"><i class="fa fa-camera" aria-hidden="true"></i> Gallery</a></li>
+					<li role="presentation"><a href="/contact"><i class="fa fa-envelope-open" aria-hidden="true"></i> Contact</a></li>
+					<!-- InstanceEndEditable -->
+				</ul>
+			</div>
+		</div>
+		
+		
+		<!-- InstanceBeginEditable name="MainPageContent" -->
+		
+		<div id="pagecontent" style="padding-top: 0px; padding-bottom: 0px;">
+			<section class="headcontent">
+				<div style="display: inline-block; max-width: 100vw; width: 100%; height:auto; padding-bottom: 50px;">
+					<div class="sectiontitle" style="display: block; margin-left: 50%; transform: translateX(-50%); margin-top: 150px">
+						<h2>GALLERY</h2>
+					</div>
+				</div>
+			</section>
+			
+			<section style="padding-top: 50px; padding-bottom: 50px; margin-bottom: 300px; background-color: #232323">
+				<div style="display: inline-block; max-width: 100vw; width: 100%; height:auto; padding-bottom: 50px;">
+					<div class="container">
+						<div class="row gallery">
+							<!--Content is filled randomly with JS-->
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+		
+		<script src="js/parallax.min.js"></script>
+		
+		<!-- InstanceEndEditable -->	
+		
+		<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) --> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script> 
+		<script src="js/lightgallery.min.js"></script> 
+		
+		<!-- lightgallery plugins --> 
+		
+		<script src="js/lg-fullscreen.min.js"></script> 
+		<script src="js/lg-autoplay.min.js"></script> 
+		<script src="js/lg-hash.min.js"></script> 
+		<script src="js/lg-pager.min.js"></script> 
+		<script src="js/lg-share.min.js"></script> 
+		<script src="js/lg-video.js"></script> 
+		<script src="js/lg-zoom.min.js"></script> 
+		<script src="js/lg-thumbnail.min.js"></script>
+		<!-- InstanceBeginEditable name="lightgalleryoptions" -->
+		
+		<script>
+		
+			$(window).load(function(){
+				
+				function shuffle(array) {
+					var currentIndex = array.length, temporaryValue, randomIndex;
+
+					// While there remain elements to shuffle...
+					while (0 !== currentIndex) {
+
+						// Pick a remaining element...
+						randomIndex = Math.floor(Math.random() * currentIndex);
+						currentIndex -= 1;
+
+						// And swap it with the current element.
+						temporaryValue = array[currentIndex];
+						array[currentIndex] = array[randomIndex];
+						array[randomIndex] = temporaryValue;
+					}
+
+					return array;
+				}
+				
+				var images = [
+					['assets/gallery/04A7371.jpg', 'assets/gallery/thumbs/04A7371.jpg'],
+					['assets/gallery/04A7374.jpg', 'assets/gallery/thumbs/04A7374.jpg'],
+					['assets/gallery/04A7396.jpg', 'assets/gallery/thumbs/04A7396.jpg'],
+					['assets/gallery/04A7397_00.jpg', 'assets/gallery/thumbs/04A7397_00.jpg'],
+					['assets/gallery/04A7414.jpg', 'assets/gallery/thumbs/04A7414.jpg'],
+					['assets/gallery/04A7423.jpg', 'assets/gallery/thumbs/04A7423.jpg'],
+					['assets/gallery/04A7426_00.jpg', 'assets/gallery/thumbs/04A7426_00.jpg'],
+					['assets/gallery/still002.jpg', 'assets/gallery/thumbs/still002.jpg'],
+					['assets/gallery/still005.jpg', 'assets/gallery/thumbs/still005.jpg'],
+					['assets/gallery/still006.jpg', 'assets/gallery/thumbs/still006.jpg'],
+					['assets/gallery/still007.jpg', 'assets/gallery/thumbs/still007.jpg'],
+					['assets/gallery/still008.jpg', 'assets/gallery/thumbs/still008.jpg'],
+					['assets/gallery/still010.jpg', 'assets/gallery/thumbs/still010.jpg'],
+					['assets/gallery/still012.jpg', 'assets/gallery/thumbs/still012.jpg'],
+					['assets/gallery/still016.jpg', 'assets/gallery/thumbs/still016.jpg'],
+					['assets/gallery/still018.jpg', 'assets/gallery/thumbs/still018.jpg'],
+					['assets/gallery/still020.jpg', 'assets/gallery/thumbs/still020.jpg'],
+					['https://youtu.be/-JfYCPEBbeA', 'assets/gallery/thumbs/John Mosich - Fox Island3.jpg', 'video'],
+					['assets/gallery/Sue_0007.jpg', 'assets/gallery/Sue_0007.jpg'],
+					['assets/gallery/Sue_0036.jpg', 'assets/gallery/Sue_0036.jpg'],
+					['assets/gallery/Fox_0010.jpg', 'assets/gallery/Fox_0010.jpg'],
+					['assets/gallery/Fox_0011.jpg', 'assets/gallery/Fox_0011.jpg'],
+					['assets/gallery/Fox_0016.jpg', 'assets/gallery/Fox_0016.jpg'],
+					['assets/gallery/Fox_0023.jpg', 'assets/gallery/Fox_0023.jpg'],
+					['assets/gallery/Day_0081.jpg', 'assets/gallery/Day_0081.jpg'],
+					['assets/gallery/Day_0012.jpg', 'assets/gallery/Day_0012.jpg'],
+					['assets/gallery/Day_0014.jpg', 'assets/gallery/Day_0014.jpg'],
+					['assets/gallery/Day_0087.jpg', 'assets/gallery/Day_0087.jpg'],
+					['assets/gallery/Day_0089.jpg', 'assets/gallery/Day_0089.jpg'],
+					['assets/gallery/Day_0091.jpg', 'assets/gallery/Day_0091.jpg'],
+					['assets/gallery/Day_0092.jpg', 'assets/gallery/Day_0092.jpg'],
+                    ['https://youtu.be/zE9nBYNAKFQ', 'assets/gallery/thumbs/Fun_In_Seattle.jpg', 'video'],
+                    ['https://youtu.be/uZ2js9svHDc', 'assets/gallery/thumbs/TacomaBridgesYT.jpg', 'video'],
+                    ['https://youtu.be/84Gm81zKNIw', 'assets/gallery/thumbs/awagner1409.jpg', 'video'],
+                    ['assets/gallery/awagner1409_001.jpg', 'assets/gallery/awagner1409_001.jpg'],
+                    ['assets/gallery/awagner1409_002.jpg', 'assets/gallery/awagner1409_002.jpg'],
+                    ['assets/gallery/awagner1409_003.jpg', 'assets/gallery/awagner1409_003.jpg'],
+                    ['assets/gallery/awagner1409_005.jpg', 'assets/gallery/awagner1409_005.jpg'],
+                    ['assets/gallery/awagner1409_006.jpg', 'assets/gallery/awagner1409_006.jpg'],
+                    ['assets/gallery/awagner1409_007.jpg', 'assets/gallery/awagner1409_007.jpg'],
+                    ['assets/gallery/awagner1409_008.jpg', 'assets/gallery/awagner1409_008.jpg'],
+				];
+				
+				var randarr = shuffle(images);
+				
+				var gallery = $('.gallery');
+				
+				randarr.forEach(function(imgpath){
+                    
+                    if(imgpath[2] != null && imgpath[2] == 'video'){
+                        gallery.append(
+						'<div class="col-xs-6 col-md-4 col-lg-3">' +
+						'<a class="thumbnail" href="' + imgpath[0] + '">' +
+						'<div> <img src="' + imgpath[1] + '" alt="" class="img">' +
+						'<div class="overlay"> <i class="fa fa-play" aria-hidden="true">' +
+						'</i></div>' + 
+                        '<div class="searchHover"> <i class="fa fa-search" aria-hidden="true">' +
+						'</i></div>' + 
+                        '</div></a></div>'
+						);
+                    } else {
+                        gallery.append(
+						'<div class="col-xs-6 col-md-4 col-lg-3">' +
+						'<a class="thumbnail" href="' + imgpath[0] + '">' +
+						'<div> <img src="' + imgpath[1] + '" alt="" class="img">' +
+						'<div class="searchHover"> <i class="fa fa-search" aria-hidden="true">' +
+						'</i></div></div></a></div>'
+						);
+                    }
+                    
+				});
+				
+				$('.gallery').lightGallery({
+					selector: '.thumbnail',
+					youtubePlayerParams: {
+						modestbranding: 1,
+						showinfo: 0,
+						rel: 0,
+						controls: 1
+					},
+					loadYoutubeThumbnail: true,
+					youtubeThumbSize: 'default',
+					vimeoPlayerParams: {
+						byline : 0,
+						portrait : 0,
+						color : 'A90707'     
+					},
+					loadVimeoThumbnail: true,
+					vimeoThumbSize: 'thumbnail_medium'					
+				});
+				
+			});
+		
+		</script>
+		<!-- InstanceEndEditable -->
+		<footer class="footer">
+			<div class="footercont1">
+				<div class="footerlinks">
+				    <div class="footerlink hvr-float">
+						<a href="./blog">
+							<i class="fa fa-rss-square" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="footerlink hvr-float">
+						<a href="https://www.facebook.com/CascadeAerialPhotography/">
+							<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="footerlink hvr-float">
+						<a href="https://www.youtube.com/channel/UCmfrIzjibW2uw-ZUbYZhEDA">
+							<i class="fa fa-youtube-play" aria-hidden="true"></i>
+						</a>
+					</div>
+					<div class="footerlink hvr-float">
+						<a href="#" class="backToTop">
+							<i class="fa fa-chevron-up" aria-hidden="true"></i>
+						</a>
+					</div>
+                </div>
+			</div>
+			<div class="footercont2">
+				<p class="footercopy text-center text-muted">All Content © Cascade Aerial Photography, 2017. All Rights Reserved.</p>
+			</div>
+		</footer>
+		
+		<script>
+		jQuery(document).ready(function() {
+			jQuery('.backToTop').click(function(event) {
+				event.preventDefault();
+				jQuery('html, body').animate({scrollTop: 0}, 1000);
+				return false;
+			});
+		});
+		</script>		
+	</body>
+>>>>>>> e8b0ed5b2638ff78962144bf11212e2e2d5ef29a
+<!-- InstanceEnd --><!-- InstanceEnd --></html>

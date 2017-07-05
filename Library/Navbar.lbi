@@ -1,0 +1,21 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<div class="main-nav">
+	<img src="../collected assets/logo_vector_white.svg" alt="Logo" class="navlogo"/>
+	<div class="nav-tgl-btn visible-xs">
+		<button type="button" data-toggle="push" data-target="#mainnavlinks" data-direction="right" aria-expanded="false"> 
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<div id="mainnavlinks" class="mainnavcont">
+		<ul class="mainnav">
+			<li role="presentation" class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+			<li role="presentation"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+			<li role="presentation"><a href="#"><i class="fa fa-tasks" aria-hidden="true"></i> Services</a></li>
+			<li role="presentation"><a href="#"><i class="fa fa-camera" aria-hidden="true"></i> Gallery</a></li>
+			<li role="presentation"><a href="#"><i class="fa fa-envelope-open" aria-hidden="true"></i> Contact</a></li>
+		</ul>
+	</div>
+</div>

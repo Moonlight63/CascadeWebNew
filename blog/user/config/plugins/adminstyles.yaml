@@ -1,0 +1,15 @@
+enabled: false
+preview: false
+styles:
+  - grav_admin
+  - metal
+  - light
+  - starkcontrast
+  - tan
+  - grey
+  - gold
+  - navy_sunrise
+  - arctic
+  - amber
+  - antique
+current: grav_admin

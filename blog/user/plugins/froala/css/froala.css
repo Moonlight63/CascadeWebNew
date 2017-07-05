@@ -1,0 +1,54 @@
+/* CSS Document */
+
+.fr-box h1, .fr-box h2, .fr-box h3, .fr-box h4, .fr-box h5, .fr-box h6, .fr-box p,
+.fr-box html, .fr-box body, .fr-box div, .fr-box span, .fr-box object, .fr-box iframe,
+.fr-box blockquote, .fr-box pre, .fr-box abbr, .fr-box address, .fr-box cite,
+.fr-box code, .fr-box del, .fr-box dfn, .fr-box em, .fr-box img, .fr-box ins,
+.fr-box kbd, .fr-box q, .fr-box samp, .fr-box small, .fr-box strong, .fr-box sub,
+.fr-box sup, .fr-box var, .fr-box b, .fr-box i, .fr-box dl, .fr-box dt, .fr-box dd,
+.fr-box ol, .fr-box ul, .fr-box li, .fr-box fieldset, .fr-box form, .fr-box label,
+.fr-box legend, .fr-box table, .fr-box caption, .fr-box tbody, .fr-box tfoot,
+.fr-box thead, .fr-box tr, .fr-box th, .fr-box td, .fr-box article, .fr-box aside,
+.fr-box canvas, .fr-box details, .fr-box figcaption, .fr-box figure, .fr-box footer,
+.fr-box header, .fr-box hgroup, .fr-box menu, .fr-box nav, .fr-box section,
+.fr-box summary, .fr-box time, .fr-box mark, .fr-box audio, .fr-box video, .fr-box input {
+    margin:0;
+    padding:0;
+    /*border:0;*/
+    line-height: normal;
+}
+
+.fr-popup h1, .fr-popup h2, .fr-popup h3, .fr-popup h4, .fr-popup h5, .fr-popup h6, .fr-popup p,
+.fr-popup html, .fr-popup body, .fr-popup div, .fr-popup span, .fr-popup object, .fr-popup iframe,
+.fr-popup blockquote, .fr-popup pre, .fr-popup abbr, .fr-popup address, .fr-popup cite,
+.fr-popup code, .fr-popup del, .fr-popup dfn, .fr-popup em, .fr-popup img, .fr-popup ins,
+.fr-popup kbd, .fr-popup q, .fr-popup samp, .fr-popup small, .fr-popup strong, .fr-popup sub,
+.fr-popup sup, .fr-popup var, .fr-popup b, .fr-popup i, .fr-popup dl, .fr-popup dt, .fr-popup dd,
+.fr-popup ol, .fr-popup ul, .fr-popup li, .fr-popup fieldset, .fr-popup form, .fr-popup label,
+.fr-popup legend, .fr-popup table, .fr-popup caption, .fr-popup tbody, .fr-popup tfoot,
+.fr-popup thead, .fr-popup tr, .fr-popup th, .fr-popup td, .fr-popup article, .fr-popup aside,
+.fr-popup canvas, .fr-popup details, .fr-popup figcaption, .fr-popup figure, .fr-popup footer,
+.fr-popup header, .fr-popup hgroup, .fr-popup menu, .fr-popup nav, .fr-popup section,
+.fr-popup summary, .fr-popup time, .fr-popup mark, .fr-popup audio, .fr-popup video, .fr-popup input {
+    margin:0;
+    padding:0;
+    /*border:0;*/
+    line-height: normal;
+}
+
+/*.fr-box * {
+    
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+    display: initial;
+    position: initial;
+    font-weight: initial;
+    font-size: initial;
+    text-align: initial;
+    line-height: initial;
+    width: initial;
+    height: initial;
+    top: initial;
+    left: initial;
+}*/
