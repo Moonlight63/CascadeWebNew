@@ -22,7 +22,7 @@ use Symfony\Component\Yaml\Yaml;
 class UsersPlugin extends Plugin
 {
     protected $route = 'users';
-    protected $groute = 'groups';
+    //protected $groute = 'groups';
     protected $enable = false;
     protected $query;
     
@@ -58,7 +58,7 @@ class UsersPlugin extends Plugin
 		
 		$uri = $this->grav['uri'];
 
-        if (strpos($uri->path(), $this->config->get('plugins.admin.route') . '/' . $this->route) === false && strpos($uri->path(), $this->config->get('plugins.admin.route') . '/' . $this->groute) === false) {
+        if (strpos($uri->path(), $this->config->get('plugins.admin.route') . '/' . $this->route) === false/* && strpos($uri->path(), $this->config->get('plugins.admin.route') . '/' . $this->groute) === false*/) {
             //return;
         }
         
@@ -85,7 +85,7 @@ class UsersPlugin extends Plugin
     public function onAdminMenu()
     {
         $this->grav['twig']->plugins_hooked_nav['PLUGIN_USERS.USERS'] = ['route' => $this->route, 'icon' => 'fa-user'];
-        $this->grav['twig']->plugins_hooked_nav['PLUGIN_USERS.GROUPS'] = ['route' => $this->groute, 'icon' => 'fa-user'];
+        //$this->grav['twig']->plugins_hooked_nav['PLUGIN_USERS.GROUPS'] = ['route' => $this->groute, 'icon' => 'fa-user'];
 		$this->onAdminRegisterPermissions();
     }
 	
@@ -277,10 +277,6 @@ class UsersPlugin extends Plugin
         if($this->isAdmin()){
             $this->grav['assets']->addCss('plugin://users/css/users.css');
             $this->grav['assets']->addJs('plugin://users/js/dropzone.js', -1);
-            /*$this->grav['assets']->addJs('https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=kp3qfij8atatwfrrd95rxw6d27opqp3feeok1orr6opoqpm0', -1);
-            $this->grav['assets']->addJs('plugin://users/js/plugins/videoembed/plugin.js', -1);
-            $this->grav['assets']->addJs('plugin://users/js/tinymceinit.js', -1);*/
-            //$this->grav['assets']->addJs('plugin://users/js/customdropzone.js', -1);
         }
             
     }
@@ -418,7 +414,6 @@ class TwigUsers{
         // add user to config
         $config->set("user", $user);
 		
-		//dump($user);
         return $user;
 	}
 	

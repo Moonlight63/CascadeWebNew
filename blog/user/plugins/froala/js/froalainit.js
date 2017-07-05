@@ -55,6 +55,7 @@
             imageInsertButtons: ['imageByURL'],
             videoInsertButtons: ['videoByURL'],
             videoDefaultWidth: '100%',
+            videoResize: false,
             toolbarSticky: false,
             htmlUntouched: false,
             heightMin: 200,

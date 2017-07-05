@@ -5,20 +5,7 @@
 form:
     fields:
         tabs:
-            fields:
-                content:
-                    fields:
-                        content:
-                            replace@: true
-                            type: froala
-                            validate:
-                                type: textarea
-                    
-                        uploads:
-                            type: pagemedia
-                            editor: html
-                            label: PLUGIN_ADMIN.PAGE_MEDIA
-                    
+            fields:                 
                 advanced:
                     fields:
                         admin_only:
