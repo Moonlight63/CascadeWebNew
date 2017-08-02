@@ -4,10 +4,6 @@
     {% set header_image_width  = page.header.header_image_width|defined(900) %}
     {% set header_image_height = page.header.header_image_height|defined(300) %}
     {% set header_image_file = page.header.header_image_file %}
-	{% set user = admin.data('users/' ~ page.header.creator) %}
-    
-    {{ dump(user) }}
-    {{ dump(users.getUser(page.header.creator)) }}
 
     <div class="list-blog-header">
 
@@ -25,7 +21,7 @@
         <ul class="list-inline">
             <li>
                 <small>
-                    <strong>Posted By: </strong><a href="{{ home_url }}/authors/query{{ config.system.param_sep }}{{ users.getUser(page.header.creator).username }}">{{ users.getUser(page.header.creator).fullname }}</a>
+                    <strong>Posted By: </strong><a href="{{ home_url }}/authors/query{{ config.system.param_sep }}{{ ownerUtils.getUser(page.header.creator).username }}">{{ ownerUtils.getUser(page.header.creator).fullname }}</a>
                 </small>
             </li>
             <li>
