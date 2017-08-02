@@ -1,0 +1,48 @@
+@extends:
+    type: default
+    context: blueprints://pages
+    
+form:
+    fields:
+        tabs:
+            fields:                 
+                advanced:
+                    fields:
+                        columns:
+                            fields:
+                                column1:
+                                    fields:
+                                        route:
+                                            type: filteredparent
+                                            label: PLUGIN_ADMIN.PARENT
+                                            classes: fancy
+                      
+                        admin_only:
+                            fields:
+                                header.creator:
+                                    type: text
+                                    style: vertical
+                                    label: Created By
+                                    readonly: true
+                                    
+                                header.visibleToGroups:
+                                    type: selectize
+                                    size: large
+                                    toggleable: true
+                                    label: Force Visible to Groups
+                                    data-options@: '\Grav\User\Groups::groups'
+                                    classes: fancy
+                                    help: PLUGIN_ADMIN.GROUPS_HELP
+                                    validate:
+                                        type: commalist
+                                        
+                                header.editableToGroups:
+                                    type: selectize
+                                    size: large
+                                    toggleable: true
+                                    label: Force Editable to Groups
+                                    data-options@: '\Grav\User\Groups::groups'
+                                    classes: fancy
+                                    help: PLUGIN_ADMIN.GROUPS_HELP
+                                    validate:
+                                        type: commalist

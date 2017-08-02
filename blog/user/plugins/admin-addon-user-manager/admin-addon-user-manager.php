@@ -5,12 +5,39 @@ use Grav\Common\Plugin;
 use RocketTheme\Toolbox\Event\Event;
 use \Grav\Common\Utils;
 use \Grav\Common\User\User;
+use Grav\Common\File\CompiledYamlFile;
+use AdminAddonUserManager\Users\Manager as UsersManager;
+use AdminAddonUserManager\Groups\Manager as GroupsManager;
 
 class AdminAddonUserManagerPlugin extends Plugin {
 
-  const SLUG = 'admin-addon-user-manager';
-  const PAGE_LOCATION = 'user-manager';
-  const CONFIG_KEY = 'plugins.' . self::SLUG;
+  /**
+   * Returns the plugin's configuration key
+   *
+   * @param String $key
+   * @return String
+   */
+  public function getPluginConfigKey($key = null) {
+    $pluginKey = 'plugins.' . $this->name;
+
+    return ($key !== null) ? $pluginKey . '.' . $key : $pluginKey;
+  }
+
+  public function getPluginConfigValue($key = null, $default = null) {
+    return $this->config->get($this->getPluginConfigKey($key), $default);
+  }
+
+  public function getConfigValue($key, $default = null) {
+    return $this->config->get($key, $default);
+  }
+
+  public function getPreviousUrl() {
+    return $this->grav['session']->{$this->name . '.previous_url'};
+  }
+
+  public function getModalsConfiguration() {
+    return CompiledYamlFile::instance(__DIR__ . DS . 'modals.yaml')->content();
+  }
 
   public static function getSubscribedEvents() {
     return [
@@ -23,27 +50,40 @@ class AdminAddonUserManagerPlugin extends Plugin {
       return;
     }
 
+    $this->grav['locator']->addPath('blueprints', '', __DIR__ . DS . 'blueprints');
+
+    include __DIR__ . DS . 'vendor' . DS . 'autoload.php';
+
+    $this->managers[] = new UsersManager($this->grav, $this);
+    $this->managers[] = new GroupsManager($this->grav, $this);
+
     $this->enable([
-      'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
+      'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', -10],
       'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
       'onAdminMenu' => ['onAdminMenu', 0],
       'onAssetsInitialized' => ['onAssetsInitialized', 0],
       'onAdminTaskExecute' => ['onAdminTaskExecute', 0],
     ]);
+
+    $this->registerPermissions();
   }
 
   public function onAssetsInitialized() {
-    $this->grav['assets']->addCss('plugin://' . self::SLUG . '/assets/style.css');
+    $assets = $this->grav['assets'];
+
+    foreach ($this->managers as $manager) {
+      $manager->initializeAssets($assets);
+    }
   }
 
   public function onAdminMenu() {
     $twig = $this->grav['twig'];
     $twig->plugins_hooked_nav = (isset($twig->plugins_hooked_nav)) ? $twig->plugins_hooked_nav : [];
-    $twig->plugins_hooked_nav['User Manager'] = [
-      'location' => self::PAGE_LOCATION,
-      'icon' => 'fa-user',
-      'authorize' => 'admin.users',
-    ];
+
+    foreach ($this->managers as $manager) {
+      $nav = $manager->getNav();
+      $twig->plugins_hooked_nav[$nav['label']] = $nav;
+    }
   }
 
   public function onAdminTwigTemplatePaths($e) {
@@ -53,51 +93,44 @@ class AdminAddonUserManagerPlugin extends Plugin {
   }
 
   public function onTwigSiteVariables() {
-    $twig = $this->grav['twig'];
     $page = $this->grav['page'];
+    $twig = $this->grav['twig'];
+    $session = $this->grav['session'];
     $uri = $this->grav['uri'];
 
-    if ($page->slug() !== self::PAGE_LOCATION) {
-      return;
-    }
+    foreach ($this->managers as $manager) {
+      if ($page->slug() === $manager->getLocation() && $this->grav['admin']->authorize(['admin.super', $manager->getRequiredPermission()])) {
+        $session->{$this->name . '.previous_url'} = $uri->route() . $uri->params();
 
-    $page = $this->grav['admin']->page(true);
-    $twig->twig_vars['context'] = $page;
-    $twig->twig_vars['users'] = $this->users();
-    $twig->twig_vars['fields'] = $this->config->get(self::CONFIG_KEY . '.modal.fields');
+        $page = $this->grav['admin']->page(true);
+        $twig->twig_vars['context'] = $page;
+
+        $vars = $manager->handleRequest();
+        $twig->twig_vars = array_merge($twig->twig_vars, $vars);
+
+        return true;
+      }
+    }
   }
 
   public function onAdminTaskExecute($e) {
-    $method = $e['method'];
+    foreach ($this->managers as $manager) {
+      if ($this->grav['admin']->authorize(['admin.super', $manager->getRequiredPermission()])) {
+        $result = $manager->handleTask($e);
 
-    if ($method === "taskUserDelete") {
-      $page = $this->grav['admin']->page(true);
-      $username = $this->grav['uri']->paths()[2];
-      $user = User::load($username);
-      
-      if ($user->file()->exists()) {
-        $user->file()->delete();
-        $this->grav->redirect('/' . $this->grav['admin']->base . '/' . self::PAGE_LOCATION);
-        return true;
+        if ($result) {
+          return true;
+        }
       }
     }
 
     return false;
   }
 
-  public function users() {
-    $users = [];
-
-    $dir = $this->grav['locator']->findResource('account://');
-    $files = $dir ? array_diff(scandir($dir), ['.', '..']) : [];
-    foreach ($files as $file) {
-      if (Utils::endsWith($file, YAML_EXT)) {
-        $user = User::load(trim(pathinfo($file, PATHINFO_FILENAME)));
-        $users[$user->username] = $user;
-      }
+  public function registerPermissions() {
+    foreach ($this->managers as $manager) {
+      $this->grav['admin']->addPermissions([$manager->getRequiredPermission() => 'boolean']);
     }
-
-    return $users;
   }
 
 }

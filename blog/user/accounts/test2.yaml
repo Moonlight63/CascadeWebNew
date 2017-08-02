@@ -1,0 +1,8 @@
+state: enabled
+email: test@te.st
+fullname: 'Test 2'
+language: en
+access:
+  admin: {  }
+  admin-addon-user-manager: {  }
+  users: {  }

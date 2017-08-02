@@ -9,8 +9,9 @@ access:
     pages: 'true'
   users:
     limitPagesToOwner: 'true'
-    showPagesWithNoOwner: 'true'
+    showPagesWithNoOwner: 'false'
     canDeletePages: 'false'
+    canPostToRoot: 'false'
 hashed_password: $2y$10$BrL7bM5WZoWZa.A6ntWHHeE6qLy817ZZNSluVOxGw6ArXBB9ndZ/G
 groups:
   - authors

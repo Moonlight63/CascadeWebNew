@@ -63,6 +63,7 @@ pages:
   ignore_folders:
     - .git
     - .idea
+    - .revs
   ignore_hidden: true
   url_taxonomy_filters: true
   frontmatter:
@@ -106,7 +107,7 @@ errors:
   display: '1'
   log: true
 debugger:
-  enabled: false
+  enabled: true
   shutdown:
     close_connection: true
   twig: true
@@ -119,6 +120,7 @@ images:
 media:
   enable_media_timestamp: false
   upload_limit: 0
+  auto_metadata_exif: false
 session:
   enabled: true
   timeout: 1800

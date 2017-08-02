@@ -1,5 +1,5 @@
 name: Admin Addon Revisions
-version: 1.0.1
+version: 1.1.0
 description: An extension for Admin plugin which adds revisions for pages. Integrates with admin, easily revert back to a previous revision whenever you want!
 icon: plug
 author:
@@ -22,6 +22,18 @@ form:
       type: toggle
       label: Plugin status
       highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    debug:
+      type: toggle
+      label: Debug mode
+      help: Enables debug mode, debug messages will appear in the debugger.
+      highlight: 0
       default: 0
       options:
         1: Enabled

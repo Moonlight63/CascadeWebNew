@@ -1,3 +1,24 @@
+# v1.5.2
+##  07/06/2017
+
+1. [](#improved)
+    * Prevents rename when new file name is already in use
+
+# v1.5.1
+##  07/06/2017
+
+1. [](#improved)
+    * Changes cursor when it is over the name
+
+# v1.5.0
+##  07/06/2017
+
+1. [](#feature)
+    * Now it supports blueprint file inputs too
+
+2. [](#improved)
+    * Now using admin task rather than custom path
+
 # v1.4.0
 ##  06/23/2017
 

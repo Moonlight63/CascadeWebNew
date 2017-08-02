@@ -5,6 +5,9 @@
     {% set header_image_height = page.header.header_image_height|defined(300) %}
     {% set header_image_file = page.header.header_image_file %}
 	{% set user = admin.data('users/' ~ page.header.creator) %}
+    
+    {{ dump(user) }}
+    {{ dump(users.getUser(page.header.creator)) }}
 
     <div class="list-blog-header">
 
