@@ -1,2 +1,9 @@
 authors:
-    readableName: 'Authors'
+  groupname: authors
+  readableName: Authors
+  access:
+    admin:
+      pages: 'true'
+    admin-addon-user-manager:
+      users: 'false'
+      groups: 'false'

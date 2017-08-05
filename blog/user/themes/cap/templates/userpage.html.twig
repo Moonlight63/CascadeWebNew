@@ -43,7 +43,7 @@
         <div class="container" style="/*margin-top: 200px;*/">
 
             <div class="row">
-                <div class="col-sm-8 blog-main">
+                <div class="col-sm-8 col-sm-offset-2 blog-main">
                     {% for child in collection %}
                         {% include 'partials/blog_item.html.twig' with {'page':child, 'truncate':true} %}
                     {% endfor %}
@@ -82,7 +82,7 @@
         {% if config.plugins.pagination.enabled and collection.params.pagination %}
         <div class="container">
             <div class="row">
-                <div class="col-sm-8 text-center">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
                     {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
                 </div>
             </div>

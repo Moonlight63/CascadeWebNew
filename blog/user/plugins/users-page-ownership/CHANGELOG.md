@@ -1,3 +1,14 @@
+# v0.9.2
+## 08/03/17
+1. [](#bug-fix)
+    * Changed parentfilter to use ownerUtils instead of users twig var.
+2. [](#improvment)
+    * Page filtering uses a repeatable macro.
+3. [](#bug-fix)
+    * Page delete now properly checks permissions.
+4. [](#improvment)
+    * Page next/prev buttons will skip over pages that cant be edited.
+    
 # v0.9.1
 ## 08/01/17
 1. [](#bug-fix)

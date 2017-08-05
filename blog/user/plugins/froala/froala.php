@@ -115,81 +115,81 @@ class FroalaPlugin extends Plugin
             $this->grav['assets']->addJs('plugin://froala/js/froalainit.js', -3);
 
             $includesForRTE = [
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/froala_editor.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/froala_style.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/froala_editor.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/froala_editor.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/froala_style.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/froala_editor.min.js",
 
                 "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css",
                 "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js",
                 "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/align.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/align.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/char_counter.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/char_counter.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/char_counter.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/char_counter.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/code_view.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/code_view.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/code_view.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/code_view.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/code_beautifier.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/code_beautifier.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/colors.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/colors.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/colors.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/colors.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/draggable.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/draggable.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/draggable.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/draggable.min.js",
 
-                //"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/entities.min.js",
+                //"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/entities.min.js",
 
-                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/file.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/file.min.js",*/
+                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/file.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/file.min.js",*/
 
-                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/font_family.min.js",*/
-                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/font_size.min.js",*/
+                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/font_family.min.js",*/
+                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/font_size.min.js",*/
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/fullscreen.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/fullscreen.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/fullscreen.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/fullscreen.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/help.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/help.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/help.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/help.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/image.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/image.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/image.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/image.min.js",
 
-                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/image_manager.min.css",*/
-                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/image_manager.min.js",*/
+                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/image_manager.min.css",*/
+                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/image_manager.min.js",*/
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/line_breaker.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/line_breaker.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/line_breaker.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/line_breaker.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/link.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/link.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/lists.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/lists.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/paragraph_format.min.js",
-                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/paragraph_style.min.js",*/
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/paragraph_format.min.js",
+                /*"https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/paragraph_style.min.js",*/
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/print.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/print.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/quick_insert.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/quick_insert.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/quick_insert.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/quick_insert.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/quote.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/quote.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/save.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/save.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/special_characters.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/special_characters.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/special_characters.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/special_characters.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/table.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/table.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/table.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/table.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/url.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/url.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/css/plugins/video.min.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/video.min.js",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/css/plugins/video.min.css",
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/video.min.js",
 
-                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.2/js/plugins/word_paste.min.js"
+                "https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.6.4/js/plugins/word_paste.min.js"
             ];
 
 

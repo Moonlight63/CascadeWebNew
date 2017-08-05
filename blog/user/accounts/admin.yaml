@@ -6,7 +6,7 @@ access:
   admin:
     super: 'true'
     login: 'true'
-  users: {  }
+  admin-addon-user-manager: {  }
 hashed_password: $2y$10$G72MQNXI6hC5BlKQwUJMIOvlvC8wqY7lMVye2rusuu.M4nHI8IsXO
 about: 'This is a really temporary bio because I haven''t written one yet. :)'
 language: en

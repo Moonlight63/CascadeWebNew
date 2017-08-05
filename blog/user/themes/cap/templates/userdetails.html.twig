@@ -1,0 +1,35 @@
+{% embed 'partials/base.html.twig' %}
+
+	{% block content %}
+    
+        <div class="sectiontitle">
+            <h2>{{ ownerUtils.getUser(page.header.creator).fullname }}</h2>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-0 col-md-3 col-md-offset-2">
+                   <div class="user_avatar">
+                        {% if ownerUtils.getUser(page.header.creator).avatar %}
+                            {% set avatar = base_url_simple ~ '/' ~ (ownerUtils.getUser(page.header.creator).avatar|first).path %}
+                        {% else %}
+                            {% set avatar = 'https://www.gravatar.com/avatar/' ~ ownerUtils.getUser(page.header.creator).email|md5 ~ '?s=200' %}
+                        {% endif %}
+                        <img src="{{ avatar }}" />
+                    </div>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-0 col-md-5">
+                    <p>{{ ownerUtils.getUser(page.header.creator).fullname }}</p>
+                    <p>{{ ownerUtils.getUser(page.header.creator).username }}</p>
+                    <p>{{ ownerUtils.getUser(page.header.creator).email }}</p>
+                    <p>{{ ownerUtils.getUser(page.header.creator).title }}</p>
+                    <p>{{ ownerUtils.getUser(page.header.creator).about }}</p>
+                    <p>{{ ownerUtils.getUser(page.header.creator).avatar }}</p>
+                    <p>{{ ownerUtils.getUser(page.header.creator).language }}</p>
+				</div>
+            </div>
+        </div>
+        
+	{% endblock %}
+
+{% endembed %}
